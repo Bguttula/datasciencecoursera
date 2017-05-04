@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Blueprint name="ConfigName" tagPrefix="TriveniHQ">
+<Tags>
+<Tag name="2_RTD_201PV" dataType="float" description="2_RTD_201PV" device="SmartGateway">
+<Datasource address="2:ModbusTriveniHQ.emersion.2_RTD_201PV" dataType="float" />
+</Tag>
+
+<Tag name="2_RTD_202PV" dataType="float" description="2_RTD_202PV" device="SmartGateway">
+<Datasource address="2:ModbusTriveniHQ.2_RTD_201PV" dataType="float" />
+</Tag>
+
+<Tag name="2_RTD_203PV" dataType="float" description="2_RTD_203PV" device="SmartGateway">
+<Datasource address="2:ModbusTriveniHQ.2_RTD_201PV" dataType="float" />
+</Tag>
+
+<Tag name="2_RTD_205PV" dataType="float" description="2_RTD_205PV" device="SmartGateway">
+<Datasource address="2:ModbusTriveniHQ.2_RTD_205PV" dataType="float" />
+</Tag>
+
+</Tags>
+
+<Devices>
+<Device name="SmartGateway" description="Blueprint for ModbusTriveniHQ" protocol="OPCUA">
+<Attributes>
+                <Attribute name="EndpointUri">opc.tcp://10.0.8.207:49310</Attribute>
+                <Attribute name="SecurityPolicy">None</Attribute>
+                <Attribute name="MessageSecurityMode">None</Attribute>
+                <Attribute name="AuthenticationMode">Anonymous</Attribute>
+</Attributes>
+</Device>
+</Devices>
+
+
+<Assets>
+<Asset name="Triveni" type="Enterprise">
+<Asset name="Bangalore HQ" type="Site">
+<Asset name="SANVICK" type="Area">
+<Asset name="Line1" type="ProcessCell">
+<Asset name="Turbine Test" type="Unit" id="1" class="ScaleTest" />
+</Asset>
+</Asset>
+</Asset>
+</Asset>
+</Assets>
+</Blueprint>
+
